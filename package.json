@@ -8,7 +8,7 @@
         ],
         "plugins": {
             "cordova-plugin-splashscreen": {},
-            "cordova-plugin-facebook4": {
+            "phonegap-facebook-plugin": {
                 "APP_ID": "1749439122016304",
                 "APP_NAME": "Happenstance_demo"
             }
@@ -17,7 +17,7 @@
     "dependencies": {
         "cordova-android": "^6.2.3",
         "cordova-ios": "^4.4.0",
-        "cordova-plugin-facebook4": "git+https://github.com/jeduan/cordova-plugin-facebook4.git",
-        "cordova-plugin-splashscreen": "^4.0.3"
+        "cordova-plugin-splashscreen": "^4.0.3",
+        "phonegap-facebook-plugin": "^0.12.0"
     }
 }

@@ -14,10 +14,10 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-facebook4": {
+    "phonegap-facebook-plugin": {
         "source": {
             "type": "registry",
-            "id": "https://github.com/jeduan/cordova-plugin-facebook4"
+            "id": "phonegap-facebook-plugin"
         },
         "is_top_level": true,
         "variables": {

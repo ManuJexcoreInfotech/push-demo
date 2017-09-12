@@ -67,18 +67,8 @@
                             "count": 1
                         }
                     ],
-                    "NSAppTransportSecurity": [
-                        {
-                            "xml": "<dict><key>NSExceptionDomains</key><dict><key>facebook.com</key><dict><key>NSIncludesSubdomains</key><true /><key>NSThirdPartyExceptionRequiresForwardSecrecy</key><false /></dict><key>fbcdn.net</key><dict><key>NSIncludesSubdomains</key><true /><key>NSThirdPartyExceptionRequiresForwardSecrecy</key><false /></dict><key>akamaihd.net</key><dict><key>NSIncludesSubdomains</key><true /><key>NSThirdPartyExceptionRequiresForwardSecrecy</key><false /></dict></dict></dict>",
-                            "count": 1
-                        }
-                    ],
-                    "LSApplicationQueriesSchemes": [
-                        {
-                            "xml": "<array><string>fbapi</string><string>fb-messenger-api</string><string>fbauth2</string><string>fbshareextension</string></array>",
-                            "count": 1
-                        }
-                    ]
+                    "NSAppTransportSecurity": [],
+                    "LSApplicationQueriesSchemes": []
                 }
             }
         }
@@ -90,7 +80,7 @@
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "hu.dpal.starter"
         },
-        "cordova-plugin-facebook4": {
+        "phonegap-facebook-plugin": {
             "APP_ID": "1749439122016304",
             "APP_NAME": "Happenstance_demo",
             "PACKAGE_NAME": "hu.dpal.starter"
@@ -115,9 +105,9 @@
             ]
         },
         {
-            "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
-            "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
-            "pluginId": "cordova-plugin-facebook4",
+            "id": "phonegap-facebook-plugin.FacebookConnectPlugin",
+            "file": "plugins/phonegap-facebook-plugin/facebookConnectPlugin.js",
+            "pluginId": "phonegap-facebook-plugin",
             "clobbers": [
                 "facebookConnectPlugin"
             ]
@@ -126,6 +116,6 @@
     "plugin_metadata": {
         "com.ionic.keyboard": "0.0.1",
         "cordova-plugin-splashscreen": "4.0.3",
-        "cordova-plugin-facebook4": "1.9.1"
+        "phonegap-facebook-plugin": "0.12.0"
     }
 }

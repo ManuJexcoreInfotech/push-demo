@@ -9,9 +9,9 @@ module.exports = [
         ]
     },
     {
-        "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
-        "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
-        "pluginId": "cordova-plugin-facebook4",
+        "id": "phonegap-facebook-plugin.FacebookConnectPlugin",
+        "file": "plugins/phonegap-facebook-plugin/facebookConnectPlugin.js",
+        "pluginId": "phonegap-facebook-plugin",
         "clobbers": [
             "facebookConnectPlugin"
         ]
@@ -21,7 +21,7 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "cordova-plugin-splashscreen": "4.0.3",
-    "cordova-plugin-facebook4": "1.9.1"
+    "phonegap-facebook-plugin": "0.12.0"
 };
 // BOTTOM OF METADATA
 });
