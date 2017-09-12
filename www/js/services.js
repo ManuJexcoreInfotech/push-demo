@@ -1,20 +1,83 @@
-/**
- * Author: hollyschinsky
- * twitter: @devgirfl
- * blog: devgirl.org
- * more tutorials: hollyschinsky.github.io
- */
+function Service($rootScope, $http, $ionicPopup, Config) {
 
-// Race condition found when trying to use $ionicPlatform.ready in app.js and calling register to display id in AppCtrl.
-// Implementing it here as a factory with promises to ensure register function is called before trying to display the id.
-app.factory(("ionPlatform"), function( $q ){
-    var ready = $q.defer();
+    var api = {
+        website: 'webservice/api/websiteinfo',
+        forgotPassword: 'webservice/api/forgotPassword',
+        logout: 'webservice/api/logout',
+        login: 'webservice/api/login',
+        register: 'webservice/api/register',
+    }, showError = false;
 
-    ionic.Platform.ready(function( device ){
-        ready.resolve( device );
-    });
+    $rootScope.service = {
+        get: function (key, params, success, error) {
 
-    return {
-        ready: ready.promise
+            if (typeof params === 'function') {
+                error = success;
+                success = params;
+                params = null;
+            }
+
+
+            var url = Config.WebUrl + api[key];
+
+            $http.get(url, {
+                params: params,
+                timeout: 20000
+            }).then(function (res) {
+                success(res.data);
+            }, handleError(error));
+        },
+        post: function (key, params, success, error) {
+            if (typeof params === 'function') {
+                callback = params;
+                params = null;
+            }
+
+            var userData = [];
+            console.log(params);
+
+            var url = Config.WebUrl + api[key];
+            $http.post(url, params).then(function (res) {
+                success(res.data);
+            }, handleError(error));
+        },
+        sendSms: function (params, success, error) {
+            if (typeof params === 'function') {
+                error = success;
+                success = params;
+                params = null;
+            }
+
+            var url = Config.WebUrl + 'smsapi/SendTemplateSMS.php';
+            $http.get(url, {
+                params: params
+            }).then(function (res) {
+                success(res.data);
+            }, handleError(error));
+        }
+    };
+
+    function handleError(error) {
+        return function (err) {
+            if (error)
+                error(err);
+            if (showError) {
+                return;
+            }
+            showError = true;
+
+
+            $ionicPopup.alert({
+                title: "Alert",
+                template: "<h4 style='text-align:center'>Something went Wrong</h4>",
+                buttons: [{
+                        text: 'OK',
+                        onTap: function () {
+                            showError = false;
+                        }
+                    }]
+            });
+
+        };
     }
-})
+}
