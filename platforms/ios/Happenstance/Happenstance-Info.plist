@@ -49,18 +49,5 @@
     <true/>
     <key>LSApplicationQueriesSchemes</key>
     <array/>
-    <key>FacebookAppID</key>
-    <string>1749439122016304</string>
-    <key>FacebookDisplayName</key>
-    <string>Happenstance_demo</string>
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fb1749439122016304</string>
-        </array>
-      </dict>
-    </array>
   </dict>
 </plist>

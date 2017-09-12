@@ -9,11 +9,6 @@
     "installed_plugins": {
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "phonegap-facebook-plugin": {
-            "APP_ID": "1749439122016304",
-            "APP_NAME": "Happenstance_demo",
-            "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
     "dependent_plugins": {}

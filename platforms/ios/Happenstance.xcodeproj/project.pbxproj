@@ -20,12 +20,6 @@
 		6A117FF4259B4B1E82DA416B /* UIWebViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE4B7B00F134645BDD54040 /* UIWebViewExtension.m */; };
 		BAAC8B57678B41A9A270BC69 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 885D6B0F4E1B4605AFADF369 /* CDVSplashScreen.m */; };
 		D6685EA88A984FF7ADF0B92A /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A10D36B5BCB46C7926DF19E /* CDVViewController+SplashScreen.m */; };
-		E64FA5178C3F49D8A94A1F67 /* FacebookConnectPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0652E21A284044169716AD69 /* FacebookConnectPlugin.m */; };
-		07ECECBC872946DC8C259D11 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036FDB7A01B54AFF884C4A67 /* FacebookSDK.framework */; };
-		C3F361335C5C481B8F97CE1C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFD06E639164F8C8ACEB705 /* libsqlite3.dylib */; };
-		760BB5C0C8FC44908FA86F8F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F781DEC0A774D9DA814A54F /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		2CED351726C34A3B975EF49F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC7253DB4004276B099F897 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		83D96880D38E468D953FECFD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDEFDD3FD3543378195E6A4 /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,13 +68,6 @@
 		6A10D36B5BCB46C7926DF19E /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		0F6CE362DD0F4E4C947F8FCD /* CDVSplashScreen.h */ = {isa = PBXFileReference; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		5F5D3FDB136E479B96E7556B /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		0652E21A284044169716AD69 /* FacebookConnectPlugin.m */ = {isa = PBXFileReference; name = "FacebookConnectPlugin.m"; path = "phonegap-facebook-plugin/FacebookConnectPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		83B0A82688AE4E4F81E08AAF /* FacebookConnectPlugin.h */ = {isa = PBXFileReference; name = "FacebookConnectPlugin.h"; path = "phonegap-facebook-plugin/FacebookConnectPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		036FDB7A01B54AFF884C4A67 /* FacebookSDK.framework */ = {isa = PBXFileReference; name = "FacebookSDK.framework"; path = "Happenstance/Plugins/phonegap-facebook-plugin/FacebookSDK.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		2BFD06E639164F8C8ACEB705 /* libsqlite3.dylib */ = {isa = PBXFileReference; name = "libsqlite3.dylib"; path = "usr/lib/libsqlite3.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
-		8F781DEC0A774D9DA814A54F /* Social.framework */ = {isa = PBXFileReference; name = "Social.framework"; path = "System/Library/Frameworks/Social.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		7CC7253DB4004276B099F897 /* Accounts.framework */ = {isa = PBXFileReference; name = "Accounts.framework"; path = "System/Library/Frameworks/Accounts.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		FEDEFDD3FD3543378195E6A4 /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +76,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				07ECECBC872946DC8C259D11 /* FacebookSDK.framework in Frameworks */,
-				C3F361335C5C481B8F97CE1C /* libsqlite3.dylib in Frameworks */,
-				760BB5C0C8FC44908FA86F8F /* Social.framework in Frameworks */,
-				2CED351726C34A3B975EF49F /* Accounts.framework in Frameworks */,
-				83D96880D38E468D953FECFD /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,11 +146,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				036FDB7A01B54AFF884C4A67 /* FacebookSDK.framework */,
-				2BFD06E639164F8C8ACEB705 /* libsqlite3.dylib */,
-				8F781DEC0A774D9DA814A54F /* Social.framework */,
-				7CC7253DB4004276B099F897 /* Accounts.framework */,
-				FEDEFDD3FD3543378195E6A4 /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -202,8 +179,6 @@
 				6A10D36B5BCB46C7926DF19E /* CDVViewController+SplashScreen.m */,
 				0F6CE362DD0F4E4C947F8FCD /* CDVSplashScreen.h */,
 				5F5D3FDB136E479B96E7556B /* CDVViewController+SplashScreen.h */,
-				0652E21A284044169716AD69 /* FacebookConnectPlugin.m */,
-				83B0A82688AE4E4F81E08AAF /* FacebookConnectPlugin.h */,
 			);
 			name = Plugins;
 			path = "Happenstance/Plugins";
@@ -320,7 +295,6 @@
 				6A117FF4259B4B1E82DA416B /* UIWebViewExtension.m in Sources */,
 				BAAC8B57678B41A9A270BC69 /* CDVSplashScreen.m in Sources */,
 				D6685EA88A984FF7ADF0B92A /* CDVViewController+SplashScreen.m in Sources */,
-				E64FA5178C3F49D8A94A1F67 /* FacebookConnectPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

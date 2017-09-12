@@ -15,58 +15,15 @@
                         {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"ios-package\" value=\"FacebookConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<plugin name=\"FacebookConnectPlugin\" value=\"FacebookConnectPlugin\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://m.facebook.com\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://graph.facebook.com\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://api.facebook.com\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://*.fbcdn.net\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://*.akamaihd.net\" />",
-                            "count": 1
                         }
                     ]
                 }
             },
             "*-Info.plist": {
                 "parents": {
-                    "FacebookAppID": [
-                        {
-                            "xml": "<string>1749439122016304</string>",
-                            "count": 1
-                        }
-                    ],
-                    "FacebookDisplayName": [
-                        {
-                            "xml": "<string>Happenstance_demo</string>",
-                            "count": 1
-                        }
-                    ],
-                    "CFBundleURLTypes": [
-                        {
-                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>fb1749439122016304</string></array></dict></array>",
-                            "count": 1
-                        }
-                    ],
+                    "FacebookAppID": [],
+                    "FacebookDisplayName": [],
+                    "CFBundleURLTypes": [],
                     "NSAppTransportSecurity": [],
                     "LSApplicationQueriesSchemes": []
                 }
@@ -78,11 +35,6 @@
             "PACKAGE_NAME": "hu.dpal.starter"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "phonegap-facebook-plugin": {
-            "APP_ID": "1749439122016304",
-            "APP_NAME": "Happenstance_demo",
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
@@ -103,19 +55,10 @@
             "clobbers": [
                 "navigator.splashscreen"
             ]
-        },
-        {
-            "id": "phonegap-facebook-plugin.FacebookConnectPlugin",
-            "file": "plugins/phonegap-facebook-plugin/facebookConnectPlugin.js",
-            "pluginId": "phonegap-facebook-plugin",
-            "clobbers": [
-                "facebookConnectPlugin"
-            ]
         }
     ],
     "plugin_metadata": {
         "com.ionic.keyboard": "0.0.1",
-        "cordova-plugin-splashscreen": "4.0.3",
-        "phonegap-facebook-plugin": "0.12.0"
+        "cordova-plugin-splashscreen": "4.0.3"
     }
 }

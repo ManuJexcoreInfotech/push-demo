@@ -7,17 +7,12 @@
             "ios"
         ],
         "plugins": {
-            "cordova-plugin-splashscreen": {},
-            "phonegap-facebook-plugin": {
-                "APP_ID": "1749439122016304",
-                "APP_NAME": "Happenstance_demo"
-            }
+            "cordova-plugin-splashscreen": {}
         }
     },
     "dependencies": {
         "cordova-android": "^6.2.3",
         "cordova-ios": "^4.4.0",
-        "cordova-plugin-splashscreen": "^4.0.3",
-        "phonegap-facebook-plugin": "^0.12.0"
+        "cordova-plugin-splashscreen": "^4.0.3"
     }
 }
