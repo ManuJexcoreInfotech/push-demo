@@ -1,11 +1,12 @@
- alert(window.location.protocol)
+ 
 var port = location.port ? ':'+location.port: '';
 var url = window.location.protocol + '://'+ window.location.hostname+port;
 app.constant("Config", {
-  "WebUrl": url+"/code/happenstance/",
+  "WebUrl": "http://localhost/code/happenstance/",
   "AppName" : "Happenspances",
   "AndroidAppUrl" : "https://play.google.com/store/apps/details?id=com.myspecialgames.advanced2048game",
-  "ErrorMessage" : "End of results"
+  "ErrorMessage" : "End of results",
+  "FBAppId":"1749439122016304"
 })
 // config contact
 app.constant("ConfigContact", {
@@ -14,8 +15,8 @@ app.constant("ConfigContact", {
 })
 // config admon
 app.constant("ConfigAdmob", {
-  "interstitial": "ca-app-pub-3940256099942544/1033173712",
-  "banner": "ca-app-pub-3940256099942544/6300978111"
+  "interstitial": "ca-app-pub-3940256099942544/6300978111",
+  "banner": "ca-app-pub-3940256099942544/1033173712"
 })
 // color variations
 app.constant("Color", {

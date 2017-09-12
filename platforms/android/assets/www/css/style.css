@@ -1,7 +1,7 @@
 /* importing fonts */
 @font-face {
-    font-family: "Source Sans Pro";
-    src: url("../font/SourceSansPro-Regular.ttf");
+    font-family: "FuturaBT-Book";
+    src: url("../font/FuturaBT-Book.ttf");
 }
 
 @font-face {
@@ -11,8 +11,8 @@
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url("../font/SourceSansPro-Light.ttf");
+    font-family: "FuturaBT-Medium";
+    src: url("../font/FuturaBT-Medium.ttf");
     font-weight: 300;
 }
 
@@ -37,7 +37,7 @@
 }
 /* basic css reset */
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .button, input, textarea { 
-    font-family: 'Source Sans Pro', sans-serif; 
+    font-family: 'FuturaBT-Book', sans-serif; 
 }
 a { 
     text-decoration: none; 
@@ -122,8 +122,14 @@ img {
     border-radius: 5px;
 }
 .button.button-light{
-    border-color: #ddd !important;
+    border:none !important;
     background-color: #acd435 !important;
+    color: #fff !important;
+    border-radius: 10px !important;
+}
+.button.button-dark{
+    border: none !important;
+    background-color: #222222 !important;
     color: #fff !important;
     border-radius: 10px !important;
 }
@@ -233,3 +239,36 @@ img {
 .marginleft25{
     margin-left: 25%;
 }
+.platform-android .bar .title{
+    font-size: 19px;
+    line-height: 35px !important;
+    font-weight: 600 !important;
+}
+.bar .button.back-button{
+    margin-top: -8px !important;
+}
+.bar.bar-light .title
+{
+	color:#222222!important;
+}
+.item h2
+{
+	color:#333333!important;
+}
+.title {
+font-family: "FuturaBT-Medium";
+}
+input[type=text],input[type=email],input[type=number]
+{
+	color:#666666!important;
+}
+.row:nth-child(odd) .col{background: #FFFFFF;}
+.row:nth-child(even) .col{background: #E3EFCD;}
+.col { color:#333333;}
+.table-header{color:#000;}
+h2.read{color:#333333;}
+h2.unread{color:#fff!important;}
+.row, .scroll {
+  height: 100%;
+}.row h4{margin:auto 20%;}
+.bar .title{line-height:34px;}

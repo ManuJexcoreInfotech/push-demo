@@ -5,7 +5,8 @@ app.constant("Config", {
   "WebUrl": "http://localhost/code/happenstance/",
   "AppName" : "Happenspances",
   "AndroidAppUrl" : "https://play.google.com/store/apps/details?id=com.myspecialgames.advanced2048game",
-  "ErrorMessage" : "End of results"
+  "ErrorMessage" : "End of results",
+  "FBAppId":"1749439122016304"
 })
 // config contact
 app.constant("ConfigContact", {

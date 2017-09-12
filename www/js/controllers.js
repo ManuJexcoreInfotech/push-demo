@@ -2,18 +2,19 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var app = angular.module('YourApp', ['ionic', 'ngSanitize', 'ngCordova', 'ngIOS9UIWebViewPatch']);
+var app = angular.module('YourApp', ['ionic', 'ngSanitize', 'ngCordova','ngOpenFB','ngCordovaOauth', 'ngIOS9UIWebViewPatch']);
 // not necessary for a web based app // needed for cordova/ phonegap application
 
 
 
-app.run(function ($ionicPlatform, $rootScope, $http, $ionicPopup, Config) {
+app.run(function ($ionicPlatform, $rootScope, $http, $ionicPopup, Config,ngFB) {
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
         if (window.cordova && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
         }
+		ngFB.init({appId: Config.FBAppId});
         if (window.StatusBar) {
             // Set the statusbar to use the default style, tweak this to
             // remove the status bar on iOS or change it to use white instead of dark colors.
@@ -414,7 +415,7 @@ app.controller('LogoutCtrl', ['$localstorage', '$scope', '$state', '$rootScope',
 
 
 /* Login us form page */
-app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 'ConfigContact', '$ionicSlideBoxDelegate', 'Color', 'Config', '$ionicPopup', function ($localstorage, $scope, $state, $rootScope, ConfigContact, $ionicSlideBoxDelegate, Color, Config, $ionicPopup)
+app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 'ConfigContact', '$ionicSlideBoxDelegate', 'Color', 'Config', '$ionicPopup','ngFB',"$cordovaOauth", function ($localstorage, $scope, $state, $rootScope, ConfigContact, $ionicSlideBoxDelegate, Color, Config, $ionicPopup , ngFB,$cordovaOauth)
     {
 		
 		
@@ -433,11 +434,61 @@ app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 
 		
         $scope.facebookLogin = function () {
 			
-			facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
-			  function loginError (error) {
-				console.error(error)
-			  }
-			);
+			/* ngFB.login({scope: 'email,read_stream,publish_actions'}).then(
+				function (response) {
+					console.log(response);
+					if (response.status === 'connected') {
+						console.log('Facebook login succeeded');
+						ngFB.api({
+							path: '/me',
+							params: {fields: 'id,first_name,last_name,email'}
+						}).then(
+								function (user) {
+									console.log(user);
+									$scope.socialData = user;
+
+									$rootScope.service.get('socialLogin', $scope.socialData, function (res) {
+										$scope.hideLoading();
+
+										if (res.status == true) {
+											$scope.user = res;
+											setStorage('user_id', res.id);
+											$scope.getUser();
+											$state.go('app.home');
+											return;
+										}
+										$ionicPopup.alert(
+												{
+													title: 'error',
+													subTitle: res.errors,
+													okType: 'buttonhk'
+												}
+										);
+										//alert( res.errors);
+									});
+								},
+								function (error) {
+									$ionicPopup.alert(
+											{
+												title: 'error',
+												subTitle: error.error_description,
+												okType: 'buttonhk'
+											}
+									);
+									//alert('Facebook error: ' + error.error_description);
+								});
+						//$scope.closeLogin();
+					} else {
+						alert('Facebook login failed');
+					}
+				}); */
+				
+				
+				$cordovaOauth.linkedin("78ropzjyw05r1p","j20CoEMegdpXzNGx", ["r_basicprofile","r_emailaddress","r_company_admin"]).then(function(result) {
+					console.log("Response Object -> " + JSON.stringify(result));
+				}, function(error) {
+					console.log("Error -> " + error);
+				});
 			
 		}
         $scope.signup = function () {
