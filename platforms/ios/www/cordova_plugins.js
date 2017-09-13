@@ -15,13 +15,23 @@ module.exports = [
         "clobbers": [
             "navigator.splashscreen"
         ]
+    },
+    {
+        "id": "cordova-plugin-inappbrowser.inappbrowser",
+        "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+        "pluginId": "cordova-plugin-inappbrowser",
+        "clobbers": [
+            "cordova.InAppBrowser.open",
+            "window.open"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "com.ionic.keyboard": "0.0.1",
-    "cordova-plugin-splashscreen": "4.0.3"
+    "cordova-plugin-splashscreen": "4.0.3",
+    "cordova-plugin-inappbrowser": "1.7.1"
 };
 // BOTTOM OF METADATA
 });
