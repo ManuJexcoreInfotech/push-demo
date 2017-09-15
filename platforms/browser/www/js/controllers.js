@@ -484,7 +484,7 @@ app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 
 				}); */
 				
 				
-				$cordovaOauth.linkedin("78ropzjyw05r1p","j20CoEMegdpXzNGx", ["r_basicprofile","r_emailaddress","r_company_admin"]).then(function(result) {
+				$cordovaOauth.google("197501877095-0m8hfeed303bchleolro52976s3sps0a.apps.googleusercontent.com", ["email"]).then(function(result) {
 					console.log("Response Object -> " + JSON.stringify(result));
 				}, function(error) {
 					console.log("Error -> " + error);

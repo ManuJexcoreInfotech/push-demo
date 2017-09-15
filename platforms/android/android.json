@@ -26,7 +26,9 @@
             },
             "AndroidManifest.xml": {
                 "parents": {
-                    "application": []
+                    "application": [],
+                    "/manifest": [],
+                    "/manifest/application": []
                 }
             }
         }

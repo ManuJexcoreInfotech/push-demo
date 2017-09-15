@@ -29,7 +29,18 @@
                     "FacebookDisplayName": [],
                     "CFBundleURLTypes": [],
                     "NSAppTransportSecurity": [],
-                    "LSApplicationQueriesSchemes": []
+                    "LSApplicationQueriesSchemes": [],
+                    "UIBackgroundModes": []
+                }
+            },
+            "*-Debug.plist": {
+                "parents": {
+                    "aps-environment": []
+                }
+            },
+            "*-Release.plist": {
+                "parents": {
+                    "aps-environment": []
                 }
             }
         }

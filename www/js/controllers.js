@@ -5,7 +5,24 @@
 var app = angular.module('YourApp', ['ionic', 'ngSanitize', 'ngCordova','ngOpenFB','ngCordovaOauth', 'ngIOS9UIWebViewPatch']);
 // not necessary for a web based app // needed for cordova/ phonegap application
 
-
+app.factory("PhoneContactsFactory", ['$q', function($q)
+{
+    return {
+        find: function()
+        {
+            var deferred = $q.defer(); // asynchronous
+            var options = new ContactFindOptions();
+            options.multiple = true;
+            var fields = ["displayName", "name"];
+            
+            navigator.contacts.find(fields, 
+				function(contacts){ deferred.resolve(contacts); }, //onsuccess
+				function(error){ deferred.reject(error); }, // onerror
+				options);
+            return deferred.promise;
+        }
+	};
+}]);
 
 app.run(function ($ionicPlatform, $rootScope, $http, $ionicPopup, Config,ngFB) {
     $ionicPlatform.ready(function () {
@@ -484,7 +501,7 @@ app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 
 				}); */
 				
 				
-				$cordovaOauth.linkedin("78ropzjyw05r1p","j20CoEMegdpXzNGx", ["r_basicprofile","r_emailaddress","r_company_admin"]).then(function(result) {
+				$cordovaOauth.google("197501877095-0m8hfeed303bchleolro52976s3sps0a.apps.googleusercontent.com", ["email"]).then(function(result) {
 					console.log("Response Object -> " + JSON.stringify(result));
 				}, function(error) {
 					console.log("Error -> " + error);
@@ -655,7 +672,23 @@ app.controller('RegisterCtrl', ['$scope', '$state', '$rootScope', 'ConfigContact
         }
     }])
 /* Contact us form page */
-app.controller('ContactCtrl', ['$scope', 'ConfigContact', function ($scope, ConfigContact) {
+app.controller('ContactCtrl', ['$scope', 'ConfigContact',"PhoneContactsFactory", function ($scope, ConfigContact,PhoneContactsFactory) {
+	
+	
+		$scope.findContact = function()
+		{
+			PhoneContactsFactory.find().then(function(contacts)
+			{
+				$arr = [];
+				for (var i = 0; i < contacts.length; i++)
+				{
+					$arr.push({name: contacts[i].name.formatted})
+				}
+				$scope.contacts = $arr;
+			});
+			
+		};
+	
         //setting heading here
         $scope.user = [];
         // contact form submit event
