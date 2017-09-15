@@ -679,7 +679,7 @@ app.controller('ContactCtrl', ['$scope', 'ConfigContact',"PhoneContactsFactory",
 		{
 			$cordovaContacts.find().then(function(allContacts) { //omitting parameter to .find() causes all contacts to be returned
 			  $scope.contacts = allContacts;
-			}
+			});
 			
 		};
 	
