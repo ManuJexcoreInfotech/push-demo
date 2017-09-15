@@ -672,14 +672,14 @@ app.controller('RegisterCtrl', ['$scope', '$state', '$rootScope', 'ConfigContact
         }
     }])
 /* Contact us form page */
-app.controller('ContactCtrl', ['$scope', 'ConfigContact',"PhoneContactsFactory"," $cordovaContacts", function ($scope, ConfigContact,PhoneContactsFactory, $cordovaContacts) {
+app.controller('ContactCtrl', ['$scope', 'ConfigContact',"PhoneContactsFactory","$cordovaContacts", function ($scope, ConfigContact,PhoneContactsFactory, $cordovaContacts) {
 	
 	
 		$scope.findContact = function()
 		{
 			$cordovaContacts.find().then(function(allContacts) { //omitting parameter to .find() causes all contacts to be returned
 			  $scope.contacts = allContacts;
-			}
+			});
 			
 		};
 	

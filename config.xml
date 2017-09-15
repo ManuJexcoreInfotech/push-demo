@@ -32,25 +32,26 @@
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="FadeSplashScreen" value="false" />
-    <icon src="www/resources/icon/app-icon-80.png" />
-    <icon gap:platform="android" gap:qualifier="ldpi" src="www/resources/android/icon/icon-36.png" />
-    <icon gap:platform="android" gap:qualifier="mdpi" src="www/resources/android/icon/icon-48.png" />
-    <icon gap:platform="android" gap:qualifier="hdpi" src="www/resources/android/icon/icon-72.png" />
-    <icon gap:platform="android" gap:qualifier="xhdpi" src="www/resources/android/icon/icon-96.png" />
-    <icon gap:platform="ios" height="57" src="www/resources/ios/icon/icon-57.png" width="57" />
-    <icon gap:platform="ios" height="72" src="www/resources/ios/icon/icon-72.png" width="72" />
-    <icon gap:platform="ios" height="114" src="www/resources/ios/icon/icon-114.png" width="114" />
-    <icon gap:platform="ios" height="144" src="www/resources/ios/icon/icon-114.png" width="144" />
-    <icon gap:platform="webos" src="www/resources/ios/icon/icon-72.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/resources/android/splash/splace-screen.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/resources/android/splash/splace-screen.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/resources/android/splash/splace-screen.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/resources/android/splash/splace-screen.png" />
-    <gap:splash gap:platform="ios" height="480" src="www/resources/splash/ios/splace-screen.png" width="320" />
-    <gap:splash gap:platform="ios" height="960" src="www/resources/splash/ios/splace-screen.png" width="640" />
-    <gap:splash gap:platform="ios" height="1136" src="www/resources/splash/ios/splace-screen.png" width="640" />
-    <gap:splash gap:platform="ios" height="1024" src="www/resources/splash/ios/splace-screen.png" width="768" />
-    <gap:splash gap:platform="ios" height="768" src="www/resources/splash/ios/splace-screen.png" width="1024" />
+    <icon src="resources/icon/app-icon-80.png" />
+    <splash src="resources/android/icon/icon-36.png" />
+    <icon gap:platform="android" gap:qualifier="ldpi" src="resources/android/icon/icon-36.png" />
+    <icon gap:platform="android" gap:qualifier="mdpi" src="resources/android/icon/icon-48.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="resources/android/icon/icon-72.png" />
+    <icon gap:platform="android" gap:qualifier="xhdpi" src="resources/android/icon/icon-96.png" />
+    <icon gap:platform="ios" height="57" src="resources/ios/icon/icon-57.png" width="57" />
+    <icon gap:platform="ios" height="72" src="resources/ios/icon/icon-72.png" width="72" />
+    <icon gap:platform="ios" height="114" src="resources/ios/icon/icon-114.png" width="114" />
+    <icon gap:platform="ios" height="144" src="resources/ios/icon/icon-114.png" width="144" />
+    <icon gap:platform="webos" src="resources/ios/icon/icon-72.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="resources/android/splash/splace-screen.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="resources/android/splash/splace-screen.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="resources/android/splash/splace-screen.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="resources/android/splash/splace-screen.png" />
+    <gap:splash gap:platform="ios" height="480" src="resources/splash/ios/splace-screen.png" width="320" />
+    <gap:splash gap:platform="ios" height="960" src="resources/splash/ios/splace-screen.png" width="640" />
+    <gap:splash gap:platform="ios" height="1136" src="resources/splash/ios/splace-screen.png" width="640" />
+    <gap:splash gap:platform="ios" height="1024" src="resources/splash/ios/splace-screen.png" width="768" />
+    <gap:splash gap:platform="ios" height="768" src="resources/splash/ios/splace-screen.png" width="1024" />
     <access origin="*" />
     <engine name="browser" spec="^4.1.0" />
     <engine name="ios" spec="^4.4.0" />
