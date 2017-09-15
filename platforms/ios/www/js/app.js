@@ -24,6 +24,6 @@ app.constant("Color", {
 })
 // push notification
 app.constant("PushNoti", {
-  "senderID": "senderID",
+  "senderID": "871704003795",
 })
 

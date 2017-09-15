@@ -12,10 +12,16 @@
         },
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
     "dependent_plugins": {
         "com.ionic.keyboard": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-plugin-compat": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     }

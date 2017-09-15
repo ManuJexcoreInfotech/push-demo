@@ -16,9 +16,14 @@
                             <textarea required ng-model="user.details" name="details" placeholder="Comments"></textarea>
                             <span ng-message class="warning-message-normal" ng-show="postForm.details.$invalid && postForm.details.$dirty">Required</span>
         		</label>
-        		<button class="button button-block button-{{appColor}}">
+        		<button class="button button-block button-{{appColor}}" ng-click="findContact()">
           		Submit
         		</button>
+				<ion-list>
+					<ion-item ng-repeat="contact in contacts">
+					  {{contact.name}}
+					</ion-item>
+				</ion-list>
         	</form>
       </div>
   </ion-content>

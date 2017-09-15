@@ -79,10 +79,10 @@ app.factory('myPushNotification', ['$http', 'PushNoti', function ($http, PushNot
             registerPush: function (fn) {
                 var myPushNotification = window.plugins.pushNotification,
                         successHandler = function (result) {
-                            //alert('result = ' + result);
+                            alert('result = ' + result);
                         },
                         errorHandler = function (error) {
-                            //alert('error = ' + error);
+                            alert('error = ' + error);
                         };
                 if (device.platform == 'android' || device.platform == 'Android') {
                     // myPushNotification.unregister(successHandler, errorHandler);

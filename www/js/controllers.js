@@ -677,15 +677,9 @@ app.controller('ContactCtrl', ['$scope', 'ConfigContact',"PhoneContactsFactory",
 	
 		$scope.findContact = function()
 		{
-			PhoneContactsFactory.find().then(function(contacts)
-			{
-				$arr = [];
-				for (var i = 0; i < contacts.length; i++)
-				{
-					$arr.push({name: contacts[i].name.formatted})
-				}
-				$scope.contacts = $arr;
-			});
+			$cordovaContacts.find().then(function(allContacts) { //omitting parameter to .find() causes all contacts to be returned
+			  $scope.contacts = allContacts;
+			}
 			
 		};
 	

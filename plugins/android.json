@@ -12,7 +12,14 @@
         },
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        }
+    }
 }
