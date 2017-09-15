@@ -130,7 +130,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                 url: "/contact",
                 views: {
                     'menuWorPress': {
-                        templateUrl: "templates/contacts.html",
+                        templateUrl: "templates/contact.html",
                         controller: "ContactCtrl"
                     }
                 }
