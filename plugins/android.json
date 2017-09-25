@@ -13,17 +13,11 @@
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "hu.dpal.starter"
         },
-        "cordova-plugin-contacts": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
         "cordova-admob": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
     "dependent_plugins": {
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
         "cordova-connectivity-monitor": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }

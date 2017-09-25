@@ -25,9 +25,6 @@
     <feature name="InAppBrowser">
         <param name="ios-package" value="CDVInAppBrowser" />
     </feature>
-    <feature name="Contacts">
-        <param name="ios-package" value="CDVContacts" />
-    </feature>
     <feature name="connectivity">
         <param name="ios-package" value="CDVAppFeelReachability" />
     </feature>

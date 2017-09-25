@@ -152,6 +152,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                         controller: "AdmobCtrl"
                     }
                 }
-            })
+            }) 
     $urlRouterProvider.otherwise("/news/admob");
 })
