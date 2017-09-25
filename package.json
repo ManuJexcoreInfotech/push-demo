@@ -12,7 +12,8 @@
             "cordova-plugin-inappbrowser": {},
             "cordova-plugin-contacts": {
                 "CONTACTS_USAGE_DESCRIPTION": " "
-            }
+            },
+            "cordova-admob": {}
         }
     },
     "dependencies": {

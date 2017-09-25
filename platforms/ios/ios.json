@@ -27,6 +27,10 @@
                         {
                             "xml": "<feature name=\"connectivity\"><param name=\"ios-package\" value=\"CDVAppFeelReachability\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMobAds\"><param name=\"ios-package\" value=\"CDVAdMobAds\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -36,7 +40,12 @@
                     "FacebookAppID": [],
                     "FacebookDisplayName": [],
                     "CFBundleURLTypes": [],
-                    "NSAppTransportSecurity": [],
+                    "NSAppTransportSecurity": [
+                        {
+                            "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
+                            "count": 1
+                        }
+                    ],
                     "LSApplicationQueriesSchemes": [],
                     "UIBackgroundModes": [],
                     "NSContactsUsageDescription": [
@@ -77,6 +86,12 @@
             "PACKAGE_NAME": "hu.dpal.starter"
         },
         "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-libgoogleadmobads": {
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-admob": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
@@ -207,6 +222,15 @@
             "clobbers": [
                 "window.connectivity"
             ]
+        },
+        {
+            "id": "cordova-admob.AdMobAds",
+            "file": "plugins/cordova-admob/www/admob.js",
+            "pluginId": "cordova-admob",
+            "clobbers": [
+                "window.admob",
+                "window.tappx"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -215,6 +239,8 @@
         "cordova-plugin-inappbrowser": "1.7.1",
         "cordova-plugin-compat": "1.0.0",
         "cordova-plugin-contacts": "2.3.1",
-        "cordova-connectivity-monitor": "1.2.2"
+        "cordova-connectivity-monitor": "1.2.2",
+        "cordova-libgoogleadmobads": "7.13.1",
+        "cordova-admob": "4.1.16"
     }
 }

@@ -530,6 +530,7 @@ app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 
             });
         };
         $scope.submitForm = function (isValid) {
+			$state.go('news.home');
             if (isValid) {
                 //alert($scope.user.email+$scope.user.password);
                 $rootScope.service.post('login', $scope.user, function (res) {
@@ -672,19 +673,13 @@ app.controller('RegisterCtrl', ['$scope', '$state', '$rootScope', 'ConfigContact
         }
     }])
 /* Contact us form page */
-app.controller('ContactCtrl', ['$scope', 'ConfigContact',"PhoneContactsFactory"," $cordovaContacts", function ($scope, ConfigContact,PhoneContactsFactory, $cordovaContacts) {
+app.controller('ContactCtrl', ['$scope', 'ConfigContact',"PhoneContactsFactory","$cordovaContacts", function ($scope, ConfigContact,PhoneContactsFactory, $cordovaContacts) {
 	
 	
 		$scope.findContact = function()
 		{
-			PhoneContactsFactory.find().then(function(contacts)
-			{
-				$arr = [];
-				for (var i = 0; i < contacts.length; i++)
-				{
-					$arr.push({name: contacts[i].name.formatted})
-				}
-				$scope.contacts = $arr;
+			$cordovaContacts.find().then(function(allContacts) { //omitting parameter to .find() causes all contacts to be returned
+			  $scope.contacts = allContacts;
 			});
 			
 		};

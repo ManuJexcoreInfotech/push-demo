@@ -530,6 +530,7 @@ app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 
             });
         };
         $scope.submitForm = function (isValid) {
+			$state.go('news.home');
             if (isValid) {
                 //alert($scope.user.email+$scope.user.password);
                 $rootScope.service.post('login', $scope.user, function (res) {

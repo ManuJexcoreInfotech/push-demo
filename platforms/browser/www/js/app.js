@@ -15,8 +15,8 @@ app.constant("ConfigContact", {
 })
 // config admon
 app.constant("ConfigAdmob", {
-  "interstitial": "ca-app-pub-3940256099942544/6300978111",
-  "banner": "ca-app-pub-3940256099942544/1033173712"
+  "interstitial": "ca-app-pub-7844737046957946~8429887817",
+  "banner": "ca-app-pub-7844737046957946/9216355879"
 })
 // color variations
 app.constant("Color", {
