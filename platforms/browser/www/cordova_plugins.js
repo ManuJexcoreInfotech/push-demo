@@ -23,21 +23,6 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-        "id": "cordova-plugin-inappbrowser.inappbrowser",
-        "pluginId": "cordova-plugin-inappbrowser",
-        "clobbers": [
-            "cordova.InAppBrowser.open",
-            "window.open"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-inappbrowser/src/browser/InAppBrowserProxy.js",
-        "id": "cordova-plugin-inappbrowser.InAppBrowserProxy",
-        "pluginId": "cordova-plugin-inappbrowser",
-        "runs": true
-    },
-    {
         "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
         "id": "cordova-connectivity-monitor.connectivity",
         "pluginId": "cordova-connectivity-monitor",
@@ -60,7 +45,6 @@ module.exports.metadata =
 {
     "com.ionic.keyboard": "0.0.1",
     "cordova-plugin-splashscreen": "4.0.3",
-    "cordova-plugin-inappbrowser": "1.7.1",
     "cordova-connectivity-monitor": "1.2.2",
     "cordova-admob": "4.1.16"
 }

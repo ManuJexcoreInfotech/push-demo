@@ -9,7 +9,6 @@
         ],
         "plugins": {
             "cordova-plugin-splashscreen": {},
-            "cordova-plugin-inappbrowser": {},
             "cordova-admob": {}
         }
     },
@@ -21,7 +20,6 @@
         "cordova-connectivity-monitor": "^1.2.2",
         "cordova-ios": "^4.4.0",
         "cordova-libgoogleadmobads": "git+https://github.com/appfeel/google-iosadmobads.git",
-        "cordova-plugin-inappbrowser": "^1.7.1",
         "cordova-plugin-splashscreen": "^4.0.3"
     }
 }

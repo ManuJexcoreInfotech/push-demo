@@ -10,9 +10,6 @@
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "hu.dpal.starter"
         },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
         "cordova-admob": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
