@@ -153,5 +153,5 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                     }
                 }
             })
-    $urlRouterProvider.otherwise("/news/home");
+    $urlRouterProvider.otherwise("/news/admob");
 })

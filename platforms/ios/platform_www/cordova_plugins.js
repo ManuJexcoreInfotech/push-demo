@@ -117,6 +117,14 @@ module.exports = [
         "merges": [
             "Contact"
         ]
+    },
+    {
+        "id": "cordova-connectivity-monitor.connectivity",
+        "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
+        "pluginId": "cordova-connectivity-monitor",
+        "clobbers": [
+            "window.connectivity"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -126,7 +134,8 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "4.0.3",
     "cordova-plugin-inappbrowser": "1.7.1",
     "cordova-plugin-compat": "1.0.0",
-    "cordova-plugin-contacts": "2.3.1"
+    "cordova-plugin-contacts": "2.3.1",
+    "cordova-connectivity-monitor": "1.2.2"
 };
 // BOTTOM OF METADATA
 });

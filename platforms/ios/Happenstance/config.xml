@@ -90,4 +90,7 @@
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="FadeSplashScreen" value="false" />
+    <feature name="connectivity">
+        <param name="ios-package" value="CDVAppFeelReachability" />
+    </feature>
 </widget>

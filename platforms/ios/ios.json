@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"Contacts\"><param name=\"ios-package\" value=\"CDVContacts\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"connectivity\"><param name=\"ios-package\" value=\"CDVAppFeelReachability\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -70,6 +74,9 @@
         },
         "cordova-plugin-contacts": {
             "CONTACTS_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "hu.dpal.starter"
+        },
+        "cordova-connectivity-monitor": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
@@ -192,6 +199,14 @@
             "merges": [
                 "Contact"
             ]
+        },
+        {
+            "id": "cordova-connectivity-monitor.connectivity",
+            "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
+            "pluginId": "cordova-connectivity-monitor",
+            "clobbers": [
+                "window.connectivity"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -199,6 +214,7 @@
         "cordova-plugin-splashscreen": "4.0.3",
         "cordova-plugin-inappbrowser": "1.7.1",
         "cordova-plugin-compat": "1.0.0",
-        "cordova-plugin-contacts": "2.3.1"
+        "cordova-plugin-contacts": "2.3.1",
+        "cordova-connectivity-monitor": "1.2.2"
     }
 }

@@ -25,6 +25,9 @@
 		C8BF2E3DEC674ABCACCF6C02 /* CDVContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A91CBB8BB5F4488A084EDAF /* CDVContact.m */; };
 		1880B1338CC14D05830ADF51 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E4F0F0C2B545F4B3F0C002 /* AddressBook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		349CCEB8B6254EA39E4CDDC4 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8A4685FE8E4861934D4115 /* AddressBookUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		018744A024BB4FDEB0D24BC0 /* CDVAppFeelReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3286D619BF9E41C0B54A2A15 /* CDVAppFeelReachability.m */; };
+		DE544722829F4B8C90D8B5CE /* AppFeelReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 604EA00598224D55BBF799EF /* AppFeelReachability.m */; };
+		0604B093021846688D5A9C65 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DEB55F8A28749B1B537503F /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,11 @@
 		871F1A9C44AE40E8B0365148 /* CDVContact.h */ = {isa = PBXFileReference; name = "CDVContact.h"; path = "cordova-plugin-contacts/CDVContact.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		C2E4F0F0C2B545F4B3F0C002 /* AddressBook.framework */ = {isa = PBXFileReference; name = "AddressBook.framework"; path = "System/Library/Frameworks/AddressBook.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		2F8A4685FE8E4861934D4115 /* AddressBookUI.framework */ = {isa = PBXFileReference; name = "AddressBookUI.framework"; path = "System/Library/Frameworks/AddressBookUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		3286D619BF9E41C0B54A2A15 /* CDVAppFeelReachability.m */ = {isa = PBXFileReference; name = "CDVAppFeelReachability.m"; path = "cordova-connectivity-monitor/CDVAppFeelReachability.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		604EA00598224D55BBF799EF /* AppFeelReachability.m */ = {isa = PBXFileReference; name = "AppFeelReachability.m"; path = "cordova-connectivity-monitor/AppFeelReachability.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		B55996E8BC7F448DBE2F9444 /* CDVAppFeelReachability.h */ = {isa = PBXFileReference; name = "CDVAppFeelReachability.h"; path = "cordova-connectivity-monitor/CDVAppFeelReachability.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		40589362275D43DC9A5862A2 /* AppFeelReachability.h */ = {isa = PBXFileReference; name = "AppFeelReachability.h"; path = "cordova-connectivity-monitor/AppFeelReachability.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		5DEB55F8A28749B1B537503F /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,7 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				1880B1338CC14D05830ADF51 /* AddressBook.framework in Frameworks */,
 				349CCEB8B6254EA39E4CDDC4 /* AddressBookUI.framework in Frameworks */,
+				0604B093021846688D5A9C65 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +172,7 @@
 			children = (
 				C2E4F0F0C2B545F4B3F0C002 /* AddressBook.framework */,
 				2F8A4685FE8E4861934D4115 /* AddressBookUI.framework */,
+				5DEB55F8A28749B1B537503F /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -202,6 +212,10 @@
 				0A91CBB8BB5F4488A084EDAF /* CDVContact.m */,
 				75850E875ED0472B919157CB /* CDVContacts.h */,
 				871F1A9C44AE40E8B0365148 /* CDVContact.h */,
+				3286D619BF9E41C0B54A2A15 /* CDVAppFeelReachability.m */,
+				604EA00598224D55BBF799EF /* AppFeelReachability.m */,
+				B55996E8BC7F448DBE2F9444 /* CDVAppFeelReachability.h */,
+				40589362275D43DC9A5862A2 /* AppFeelReachability.h */,
 			);
 			name = Plugins;
 			path = "Happenstance/Plugins";
@@ -321,6 +335,8 @@
 				3ED08AD9C55643C8ADD038AD /* CDVInAppBrowser.m in Sources */,
 				27A1DA51E7CF4BC8A7EFAA0E /* CDVContacts.m in Sources */,
 				C8BF2E3DEC674ABCACCF6C02 /* CDVContact.m in Sources */,
+				018744A024BB4FDEB0D24BC0 /* CDVAppFeelReachability.m in Sources */,
+				DE544722829F4B8C90D8B5CE /* AppFeelReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

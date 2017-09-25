@@ -17,9 +17,12 @@
     },
     "dependencies": {
         "angular-openfb": "0.0.5",
+        "cordova-admob": "^4.1.16",
         "cordova-android": "^6.2.3",
         "cordova-browser": "^4.1.0",
+        "cordova-connectivity-monitor": "^1.2.2",
         "cordova-ios": "^4.4.0",
+        "cordova-libgoogleadmobads": "git+https://github.com/appfeel/google-iosadmobads.git",
         "cordova-plugin-compat": "^1.0.0",
         "cordova-plugin-contacts": "^2.3.1",
         "cordova-plugin-inappbrowser": "^1.7.1",
