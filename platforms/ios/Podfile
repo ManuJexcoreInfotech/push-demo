@@ -2,5 +2,5 @@
 platform :ios, '8.0'
 target 'C:\xampp\htdocs\ionic\push-demo\platforms\ios\Happenstance' do
 	project 'C:\xampp\htdocs\ionic\push-demo\platforms\ios\Happenstance.xcodeproj'
-
+	pod 'FirebaseMessaging', '~> 2.0.0'
 end

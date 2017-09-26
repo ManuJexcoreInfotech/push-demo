@@ -13,11 +13,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"connectivity\"><param name=\"android-package\" value=\"com.appfeel.cordova.connectivity.Connectivity\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"AdMobAds\"><param name=\"android-package\" value=\"com.appfeel.cordova.admob.AdMobAds\" /></feature>",
+                            "xml": "<feature name=\"PushNotification\"><param name=\"android-package\" value=\"com.adobe.phonegap.push.PushPlugin\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -31,23 +27,47 @@
             "AndroidManifest.xml": {
                 "parents": {
                     "application": [],
-                    "/manifest": [],
-                    "/manifest/application": [
+                    "/manifest": [
                         {
-                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
                             "count": 1
                         }
                     ],
-                    "/*": [
+                    "/manifest/application": [
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 2
+                            "xml": "<activity android:exported=\"true\" android:name=\"com.adobe.phonegap.push.PushHandlerActivity\" android:permission=\"${applicationId}.permission.PushHandlerActivity\" />",
+                            "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-                            "count": 2
+                            "xml": "<receiver android:name=\"com.adobe.phonegap.push.BackgroundActionButtonHandler\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"com.adobe.phonegap.push.PushDismissedHandler\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.adobe.phonegap.push.FCMService\"><intent-filter><action android:name=\"com.google.firebase.MESSAGING_EVENT\" /></intent-filter></service>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.adobe.phonegap.push.PushInstanceIDListenerService\"><intent-filter><action android:name=\"com.google.firebase.INSTANCE_ID_EVENT\" /></intent-filter></service>",
+                            "count": 1
                         }
-                    ]
+                    ],
+                    "/*": []
                 }
             }
         }
@@ -56,10 +76,7 @@
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "hu.dpal.starter"
         },
-        "cordova-connectivity-monitor": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-admob": {
+        "phonegap-plugin-push": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
@@ -74,26 +91,16 @@
             ]
         },
         {
-            "id": "cordova-connectivity-monitor.connectivity",
-            "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
-            "pluginId": "cordova-connectivity-monitor",
+            "id": "phonegap-plugin-push.PushNotification",
+            "file": "plugins/phonegap-plugin-push/www/push.js",
+            "pluginId": "phonegap-plugin-push",
             "clobbers": [
-                "window.connectivity"
-            ]
-        },
-        {
-            "id": "cordova-admob.AdMobAds",
-            "file": "plugins/cordova-admob/www/admob.js",
-            "pluginId": "cordova-admob",
-            "clobbers": [
-                "window.admob",
-                "window.tappx"
+                "PushNotification"
             ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-splashscreen": "4.0.3",
-        "cordova-connectivity-monitor": "1.2.2",
-        "cordova-admob": "4.1.16"
+        "phonegap-plugin-push": "2.0.0"
     }
 }

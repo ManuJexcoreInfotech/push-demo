@@ -49,12 +49,16 @@
     <true/>
     <key>LSApplicationQueriesSchemes</key>
     <array/>
+    <key>NSContactsUsageDescription</key>
+    <string/>
     <key>NSAppTransportSecurity</key>
     <dict>
       <key>NSAllowsArbitraryLoads</key>
       <true/>
     </dict>
-    <key>NSContactsUsageDescription</key>
-    <string/>
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>remote-notification</string>
+    </array>
   </dict>
 </plist>

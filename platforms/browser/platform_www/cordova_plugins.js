@@ -23,20 +23,19 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
-        "id": "cordova-connectivity-monitor.connectivity",
-        "pluginId": "cordova-connectivity-monitor",
+        "file": "plugins/phonegap-plugin-push/www/push.js",
+        "id": "phonegap-plugin-push.PushNotification",
+        "pluginId": "phonegap-plugin-push",
         "clobbers": [
-            "window.connectivity"
+            "PushNotification"
         ]
     },
     {
-        "file": "plugins/cordova-admob/www/admob.js",
-        "id": "cordova-admob.AdMobAds",
-        "pluginId": "cordova-admob",
+        "file": "plugins/phonegap-plugin-push/www/browser/push.js",
+        "id": "phonegap-plugin-push.BrowserPush",
+        "pluginId": "phonegap-plugin-push",
         "clobbers": [
-            "window.admob",
-            "window.tappx"
+            "PushNotification"
         ]
     }
 ];
@@ -45,8 +44,7 @@ module.exports.metadata =
 {
     "com.ionic.keyboard": "0.0.1",
     "cordova-plugin-splashscreen": "4.0.3",
-    "cordova-connectivity-monitor": "1.2.2",
-    "cordova-admob": "4.1.16"
+    "phonegap-plugin-push": "2.0.0"
 }
 // BOTTOM OF METADATA
 });

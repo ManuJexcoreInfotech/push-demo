@@ -10,13 +10,9 @@
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "hu.dpal.starter"
         },
-        "cordova-admob": {
+        "phonegap-plugin-push": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
-    "dependent_plugins": {
-        "cordova-connectivity-monitor": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        }
-    }
+    "dependent_plugins": {}
 }

@@ -17,11 +17,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"connectivity\"><param name=\"ios-package\" value=\"CDVAppFeelReachability\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"AdMobAds\"><param name=\"ios-package\" value=\"CDVAdMobAds\" /></feature>",
+                            "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -32,25 +28,35 @@
                     "FacebookAppID": [],
                     "FacebookDisplayName": [],
                     "CFBundleURLTypes": [],
-                    "NSAppTransportSecurity": [
+                    "NSAppTransportSecurity": [],
+                    "LSApplicationQueriesSchemes": [],
+                    "UIBackgroundModes": [
                         {
-                            "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
+                            "xml": "<array><string>remote-notification</string></array>",
                             "count": 1
                         }
                     ],
-                    "LSApplicationQueriesSchemes": [],
-                    "UIBackgroundModes": [],
                     "NSContactsUsageDescription": []
                 }
             },
             "*-Debug.plist": {
                 "parents": {
-                    "aps-environment": []
+                    "aps-environment": [
+                        {
+                            "xml": "<string>development</string>",
+                            "count": 1
+                        }
+                    ]
                 }
             },
             "*-Release.plist": {
                 "parents": {
-                    "aps-environment": []
+                    "aps-environment": [
+                        {
+                            "xml": "<string>production</string>",
+                            "count": 1
+                        }
+                    ]
                 }
             }
         }
@@ -62,13 +68,7 @@
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "hu.dpal.starter"
         },
-        "cordova-connectivity-monitor": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-libgoogleadmobads": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "cordova-admob": {
+        "phonegap-plugin-push": {
             "PACKAGE_NAME": "hu.dpal.starter"
         }
     },
@@ -91,28 +91,17 @@
             ]
         },
         {
-            "id": "cordova-connectivity-monitor.connectivity",
-            "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
-            "pluginId": "cordova-connectivity-monitor",
+            "id": "phonegap-plugin-push.PushNotification",
+            "file": "plugins/phonegap-plugin-push/www/push.js",
+            "pluginId": "phonegap-plugin-push",
             "clobbers": [
-                "window.connectivity"
-            ]
-        },
-        {
-            "id": "cordova-admob.AdMobAds",
-            "file": "plugins/cordova-admob/www/admob.js",
-            "pluginId": "cordova-admob",
-            "clobbers": [
-                "window.admob",
-                "window.tappx"
+                "PushNotification"
             ]
         }
     ],
     "plugin_metadata": {
         "com.ionic.keyboard": "0.0.1",
         "cordova-plugin-splashscreen": "4.0.3",
-        "cordova-connectivity-monitor": "1.2.2",
-        "cordova-libgoogleadmobads": "7.13.1",
-        "cordova-admob": "4.1.16"
+        "phonegap-plugin-push": "2.0.0"
     }
 }
