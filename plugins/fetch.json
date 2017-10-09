@@ -30,14 +30,6 @@
         "is_top_level": false,
         "variables": {}
     },
-    "cordova-libgoogleadmobads": {
-        "source": {
-            "type": "registry",
-            "id": "https://github.com/appfeel/google-iosadmobads"
-        },
-        "is_top_level": false,
-        "variables": {}
-    },
     "phonegap-plugin-push": {
         "source": {
             "type": "registry",
