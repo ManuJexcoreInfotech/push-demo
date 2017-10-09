@@ -451,7 +451,7 @@ app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 
 		
         $scope.facebookLogin = function () {
 			
-			/* ngFB.login({scope: 'email,read_stream,publish_actions'}).then(
+			 ngFB.login({scope: 'email,read_stream,publish_actions'}).then(
 				function (response) {
 					console.log(response);
 					if (response.status === 'connected') {
@@ -498,14 +498,14 @@ app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 
 					} else {
 						alert('Facebook login failed');
 					}
-				}); */
+				}); 
 				
 				
-				$cordovaOauth.google("197501877095-0m8hfeed303bchleolro52976s3sps0a.apps.googleusercontent.com", ["email"]).then(function(result) {
+				/* $cordovaOauth.google("197501877095-0m8hfeed303bchleolro52976s3sps0a.apps.googleusercontent.com", ["email"]).then(function(result) {
 					console.log("Response Object -> " + JSON.stringify(result));
 				}, function(error) {
 					console.log("Error -> " + error);
-				});
+				}); */
 			
 		}
         $scope.signup = function () {
