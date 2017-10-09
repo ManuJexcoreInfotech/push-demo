@@ -450,7 +450,7 @@ app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 
 
 		
         $scope.facebookLogin = function () {
-			
+			alert(1);
 			 ngFB.login({scope: 'email,read_stream,publish_actions'}).then(
 				function (response) {
 					console.log(response);
