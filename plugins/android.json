@@ -1,18 +1,23 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "hu.dpal.starter"
     },
-    "config_munge": {
-        "files": {}
+    "phonegap-plugin-push": {
+      "PACKAGE_NAME": "hu.dpal.starter"
     },
-    "installed_plugins": {
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        },
-        "phonegap-plugin-push": {
-            "PACKAGE_NAME": "hu.dpal.starter"
-        }
-    },
-    "dependent_plugins": {}
+    "cordova-plugin-facebook4": {
+      "APP_ID": "1749439122016304",
+      "APP_NAME": "Happenspances",
+      "PACKAGE_NAME": "hu.dpal.starter"
+    }
+  },
+  "dependent_plugins": {}
 }

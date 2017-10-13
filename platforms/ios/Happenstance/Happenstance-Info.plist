@@ -48,7 +48,12 @@
     <key>UIRequiresFullScreen</key>
     <true/>
     <key>LSApplicationQueriesSchemes</key>
-    <array/>
+    <array>
+      <string>fbapi</string>
+      <string>fb-messenger-api</string>
+      <string>fbauth2</string>
+      <string>fbshareextension</string>
+    </array>
     <key>NSContactsUsageDescription</key>
     <string/>
     <key>UIBackgroundModes</key>
@@ -57,8 +62,45 @@
     </array>
     <key>NSAppTransportSecurity</key>
     <dict>
+      <key>NSExceptionDomains</key>
+      <dict>
+        <key>facebook.com</key>
+        <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+          <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+          <false/>
+        </dict>
+        <key>fbcdn.net</key>
+        <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+          <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+          <false/>
+        </dict>
+        <key>akamaihd.net</key>
+        <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+          <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+          <false/>
+        </dict>
+      </dict>
       <key>NSAllowsArbitraryLoads</key>
       <true/>
     </dict>
+    <key>FacebookAppID</key>
+    <string>1749439122016304</string>
+    <key>FacebookDisplayName</key>
+    <string>Happenspances</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb1749439122016304</string>
+        </array>
+      </dict>
+    </array>
   </dict>
 </plist>

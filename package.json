@@ -1,22 +1,25 @@
 {
-    "name": "hu.dpal.starter",
-    "version": "0.0.2",
-    "displayName": "Ionic (RequireJS) Seed App",
-    "cordova": {
-        "platforms": [
-            "browser",
-            "ios"
-        ],
-        "plugins": {
-            "cordova-plugin-splashscreen": {}
-        }
-    },
-    "dependencies": {
-        "angular-openfb": "0.0.5",
-        "cordova-android": "^6.2.3",
-        "cordova-browser": "^4.1.0",
-        "cordova-ios": "^4.4.0",
-        "cordova-plugin-splashscreen": "^4.0.3",
-        "phonegap-plugin-push": "^2.0.0"
+  "name": "hu.dpal.starter",
+  "version": "0.0.2",
+  "displayName": "Ionic (RequireJS) Seed App",
+  "cordova": {
+    "platforms": [
+      "ios"
+    ],
+    "plugins": {
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-facebook4": {
+        "APP_ID": "1749439122016304",
+        "APP_NAME": "Happenspances"
+      }
     }
+  },
+  "dependencies": {
+    "angular-openfb": "0.0.5",
+    "cordova-android": "^6.2.3",
+    "cordova-ios": "^4.4.0",
+    "cordova-plugin-facebook4": "^1.9.1",
+    "cordova-plugin-splashscreen": "^4.0.3",
+    "phonegap-plugin-push": "^2.0.0"
+  }
 }

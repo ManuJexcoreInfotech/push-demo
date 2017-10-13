@@ -1,43 +1,54 @@
 {
-    "com.ionic.keyboard": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/driftyco/ionic-plugins-keyboard.git",
-            "subdir": "."
-        }
-    },
-    "cordova-plugin-splashscreen": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-splashscreen@^4.0.3"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-compat": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-compat@^1.0.0"
-        },
-        "is_top_level": false,
-        "variables": {}
-    },
-    "cordova-connectivity-monitor": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-connectivity-monitor"
-        },
-        "is_top_level": false,
-        "variables": {}
-    },
-    "phonegap-plugin-push": {
-        "source": {
-            "type": "registry",
-            "id": "phonegap-plugin-push@2.0.0"
-        },
-        "is_top_level": true,
-        "variables": {
-            "SENDER_ID": "197501877095"
-        }
+  "com.ionic.keyboard": {
+    "source": {
+      "type": "git",
+      "url": "https://github.com/driftyco/ionic-plugins-keyboard.git",
+      "subdir": "."
     }
+  },
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@^4.0.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-compat": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-compat@^1.0.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-connectivity-monitor": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-connectivity-monitor"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "phonegap-plugin-push": {
+    "source": {
+      "type": "registry",
+      "id": "phonegap-plugin-push@2.0.0"
+    },
+    "is_top_level": true,
+    "variables": {
+      "SENDER_ID": "197501877095"
+    }
+  },
+  "cordova-plugin-facebook4": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-facebook4@^1.9.1"
+    },
+    "is_top_level": true,
+    "variables": {
+      "APP_ID": "1749439122016304",
+      "APP_NAME": "Happenspances"
+    }
+  }
 }

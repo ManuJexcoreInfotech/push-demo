@@ -53,7 +53,10 @@
     <gap:splash gap:platform="ios" height="1024" src="resources/splash/ios/splace-screen.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="resources/splash/ios/splace-screen.png" width="1024" />
     <access origin="*" />
-    <engine name="browser" spec="^4.1.0" />
     <engine name="ios" spec="^4.4.0" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
+    <plugin name="cordova-plugin-facebook4" spec="^1.9.1">
+        <variable name="APP_ID" value="1749439122016304" />
+        <variable name="APP_NAME" value="Happenspances" />
+    </plugin>
 </widget>
