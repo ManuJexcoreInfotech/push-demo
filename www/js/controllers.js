@@ -436,69 +436,27 @@ app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 
     {
 		
 		
-        if ($localstorage.get('user_id'))
-        {
-            $state.go('news.home');
-        }
+      
         $scope.appColor = Color.AppColor;
         //setting heading here
         $scope.user = {};
-        // contact form submit event
-		var fbLoginSuccess = function (userData) {
-		  console.log("UserInfo: ", userData);
-		}
+        // contact form submit event	
 
 		
         $scope.facebookLogin = function () {
-			alert(1);
-			 ngFB.login({scope: 'email,read_stream,publish_actions'}).then(
-				function (response) {
-					console.log(response);
-					if (response.status === 'connected') {
-						console.log('Facebook login succeeded');
-						ngFB.api({
-							path: '/me',
-							params: {fields: 'id,first_name,last_name,email'}
-						}).then(
-								function (user) {
-									console.log(user);
-									$scope.socialData = user;
-
-									$rootScope.service.get('socialLogin', $scope.socialData, function (res) {
-										$scope.hideLoading();
-
-										if (res.status == true) {
-											$scope.user = res;
-											setStorage('user_id', res.id);
-											$scope.getUser();
-											$state.go('app.home');
-											return;
-										}
-										$ionicPopup.alert(
-												{
-													title: 'error',
-													subTitle: res.errors,
-													okType: 'buttonhk'
-												}
-										);
-										//alert( res.errors);
-									});
-								},
-								function (error) {
-									$ionicPopup.alert(
-											{
-												title: 'error',
-												subTitle: error.error_description,
-												okType: 'buttonhk'
-											}
-									);
-									//alert('Facebook error: ' + error.error_description);
-								});
-						//$scope.closeLogin();
-					} else {
-						alert('Facebook login failed');
-					}
-				}); 
+			alert(1)
+				var fbLoginSuccess = function (userData) {
+				  console.log("UserInfo: ", userData);
+				  facebookConnectPlugin.getAccessToken(function(token) {
+					console.log("Token: " + token);
+				  });
+				}
+				facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
+				  function (error) {
+					console.error(error)
+				  }
+				);
+		
 				
 				
 				/* $cordovaOauth.google("197501877095-0m8hfeed303bchleolro52976s3sps0a.apps.googleusercontent.com", ["email"]).then(function(result) {
