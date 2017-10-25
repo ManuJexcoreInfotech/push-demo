@@ -444,18 +444,23 @@ app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 
 
 		
         $scope.facebookLogin = function () {
-			alert(1)
-				var fbLoginSuccess = function (userData) {
-				  console.log("UserInfo: ", userData);
-				  facebookConnectPlugin.getAccessToken(function(token) {
-					console.log("Token: " + token);
-				  });
+			facebookConnectPlugin.login(
+				["public_profile", "email"],
+				function (response) {
+					var OAuthToken = response.authResponse.accessToken;
+					var OAuthAccessToken = response.authResponse.userID;
+					if (response.authResponse) {
+						facebookConnectPlugin.api('/me', null,
+							function (me_response) {
+								alert("Success: " + me_response);
+								facebookConnectPlugin.logout(function (response) {}, function (response) {});                            
+							});
+					}                
+				},
+				function (response) {                
+					alert("Error: " + me_response);
 				}
-				facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
-				  function (error) {
-					console.error(error)
-				  }
-				);
+			);
 		
 				
 				
