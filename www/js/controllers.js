@@ -444,6 +444,7 @@ app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 
 
 		
         $scope.facebookLogin = function () {
+			alert("FB");
 			facebookConnectPlugin.login(
 				["public_profile", "email"],
 				function (response) {
