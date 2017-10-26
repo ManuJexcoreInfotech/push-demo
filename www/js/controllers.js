@@ -454,6 +454,9 @@ app.controller('LoginCtrl', ['$localstorage', '$scope', '$state', '$rootScope', 
 						facebookConnectPlugin.api('/me', null,
 							function (me_response) {
 								alert("Success: " + me_response);
+								forEach(me_response,, function (value, index) {
+									alert(index + value);
+								})
 								facebookConnectPlugin.logout(function (response) {}, function (response) {});                            
 							});
 					}                
